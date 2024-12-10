@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គន្លឹះសម្រាប់ SmartNas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
+
+       <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    
+    <nav>
+        <img src="img/download.jpg" alt="SmartNas Logo">
+
+        <button class="mobile-menu-btn">
+            <span>☰</span>
+        </button>
+        <div class="nav-links">
+            <a href="#installation-guide">របៀប Download App</a>
+            <a href="#login-instructions">របៀបចូលប្រើប្រាស់កម្មវិធី</a>
+            <a href="#usage-guide">មុខងារ SmartNas</a>
+            <a href="#advantages">អត្ថប្រយោជន៍</a>
+        </div>
+    </nav>
+    <div class="download-container" id="installation-guide">
+        <h2 class="download-title">របៀប Download App</h2>
+
+        <div class="download-panels">
+            <!-- Android Panel -->
+            <div class="platform-panel">
+                <div class="platform-header">
+                    <img src="Img/play-store.jpg" alt="Android" class="platform-icon">
+                    <h3 class="platform-title">សម្រាប់ Android</h3>
+                </div>
+                <div class="platform-content">
+                    <div class="screenshot-gallery">
+                        <img src="Img/play store3.jpg" alt="Android Screenshot 1" class="screenshot">
+                        <img src="Img/play store1.jpg" alt="Android Screenshot 2" class="screenshot">
+                        <img src="Img/play store2.jpg" alt="Android Screenshot 3" class="screenshot">
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=net.omobio.smartsc&hl=en"
+                        class="download-button">
+                        <img src="Img/downloads.png" alt="" class="store-icon">
+                        <span>ទាញយកពី Google Play</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- iOS Panel -->
+            <div class="platform-panel">
+                <div class="platform-header">
+                    <img src="Img/apps.jpg" alt="iOS" class="platform-icon">
+                    <h3 class="platform-title">សម្រាប់ iOS</h3>
+                </div>
+                <div class="platform-content">
+                    <div class="screenshot-gallery">
+                        <img src="Img/ios1.jpg" alt="iOS Screenshot 1" class="screenshot">
+                        <img src="Img/ios2.jpg" alt="iOS Screenshot 2" class="screenshot">
+                        <img src="Img/ios3.jpg" alt="iOS Screenshot 3" class="screenshot">
+                    </div>
+                    <a href="https://apps.apple.com/app/your.app.id" class="download-button">
+                        <img src="Img/downloads.png" alt="" class="store-icon">
+                        <span>ទាញយកពី App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="usage-guide-section" id="login-instructions">
+        <h2 class="section-title">របៀបចូលប្រើប្រាស់កម្មវិធី</h2>
+
+        <div class="usage-steps">
+            <!-- Step 1 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <!-- <div class="step-badge">១</div> -->
+                    <h3>ជំហានទី ១</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/open.jpg" alt="បើកកម្មវិធី SmartNas" class="usage-preview">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ជន្ទាប់ពី install​ជោគជ័យ​ចុច "Open" ដើម្បីបើកកម្មវិធី</p>
+                        <ul class="step-tips">
+                            <li>ត្រូវប្រាកដថាបានដំឡើងកម្មវិធីដោយជោគជ័យ</li>
+                            <li>ចុចលើប៊ូតុង "Open" ដើម្បីបើកកម្មវិធី</li>
+                            <li>ប្រសិនបើមិនឃើញប៊ូតុង "Open" អ្នកអាចសវែងរកអាយខនកម្មវិធីនៅលើទូរស័ព្ទរបស់អ្នក</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ២:</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/lang.jpg" alt="បើកកម្មវិធី SmartNas" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ផ្រើសរើសភាសាដែលអ្នកចង់ប្រើប្រាស់។ កម្មវិធីមានភាសាជាច្រើនឲ្យជ្រើសរើស
+                            រួមមាន៖ ភាសាខ្មែរ អង់គ្លេស និងភាសាផ្សេងៗទៀត។</p>
+                        <ul class="step-tips">
+                            <li>ចុចលើប៊ូតុង "ភាសាខ្មែរ" ដើម្បីប្រើប្រាស់ជាភាសាខ្មែរ</li>
+                            <li>ចុចលើប៊ូតុង "English" ដើម្បីប្រើប្រាស់ជាភាសាអង់គ្លេស</li>
+                            <li>អ្នកអាចប្តូរភាសានៅពេលក្រោយបានតាមរយៈការកំណត់</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៣</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/login1.jpg" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">បុចប៊ូតុង "ទិញលេខទូរស័ព្ទ" ប្រសិនបើមិនទាន់មានគណនី ឬ ចុចប៊ូតុង
+                            "ចូលក្នុងកម្មវិធី" ប្រសិនបើលោកអ្នកមានគណនីរួចហើយ។</p>
+                        <ul class="step-tips">
+                            <li>ប្រសិនបើមិនទាន់មានគណនី សូមចុចប៊ូតុង "ទិញលេខទូរស័ព្ទ"</li>
+                            <li>ប្រសិនបើមានគណនីរួចហើយ សូមចុចប៊ូតុង "ចូលក្នុងកម្មវិធី"</li>
+                            <li>ត្រូវប្រាកដថាអ្នកបានជ្រើសរើសប៊ូតុងត្រឹមត្រូវ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៤</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/login3.jpg" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">បញ្ចូលលេខទូរស័ព្ទរបស់លោកអ្នក
+                            ដោយប្រើប្រាស់ក្តារចុចលេខដែលបង្ហាញនៅលើអេក្រង់។</p>
+                        <ul class="step-tips">
+                            <li>ត្រូវប្រាកដថាលេខទូរស័ព្ទមាន ១០ ខ្ទង់</li>
+                            <li>លេខទូរស័ព្ទត្រូវតែជាលេខដែលកំពុងប្រើប្រាស់</li>
+                            <li>មិនអាចប្រើលេខទូរស័ព្ទដែលបានចុះឈ្មោះរួចហើយបានទេ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៥</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/login4.jpg" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">កិនិត្យមើលលេខទូរស័ព្ទឡើងវិញ និងចុចប៊ូតុង "ចូលក្នុងកម្មវិធី"
+                            ដើម្បីបន្តទៅជំហានបន្ទាប់។</p>
+                        <ul class="step-tips">
+                            <li>ត្រូវប្រាកដថាលេខទូរស័ព្ទត្រឹមត្រូវមុនពេលចុចបន្ត</li>
+                            <li>អ្នកអាចកែប្រែលេខទូរស័ព្ទបានប្រសិនបើមានកំហុស</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 6 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៦</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/login5.jpg" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ពន្តាប់ពីទទួលបាន SMS ដែលមានលេខកូដ OTP
+                            សូមបញ្ចូលលេខកូដនោះទៅក្នុងប្រអប់ខាងលើ។</p>
+                        <ul class="step-tips">
+                            <li>លេខកូដ OTP មាន 6 ខ្ទង់</li>
+                            <li>លេខកូដនឹងផុតកំណត់ក្នុងរយៈពេល ៩០ វិនាទី</li>
+                            <li>ប្រសិនបើមិនទទួលបានលេខកូដ អ្នកអាចស្នើសុំម្តងទៀតដោយចុចលើ "ផ្ញើម្តងទៀត"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 7 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៧</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/login6.jpg" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">បន្តាប់ពីបញ្ចូលលេខកូដទាំង6ខ្ទង់នោះទៅក្នុងប្រអប់រួច
+                            ប្រសិនបើលោកអ្នកមិនអាចចូលទៅក្នុងកម្មវិធីទេលោកអ្នកអាចចុចប៊ូតុង "ស្នើសុំលេខកូដបញ្ជាក់ថ្មី"​
+                            ដើម្បីទទូលបានលេខកូដបញ្ជាក់ថ្មីផងដែរ</p>
+                        <ul class="step-tips">
+                            <li>ត្រូវប្រាកដថាបានបញ្ចូលលេខកូដត្រឹមត្រូវ</li>
+                            <li>អាចស្នើសុំលេខកូដថ្មីបានប្រសិនបើមិនទទួលបានលេខកូដ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 8 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៨</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/idcards.png" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">បន្ទាប់ពីបញ្ចូលលេខទូរស័ព្ទទាំងអស់នៅក្នុងប្រអប់រួចរាល់ហើយ
+                            ត្រូវបំពេញព័ត៌មានផ្ទាល់ខ្លួនដូចជាឈ្មោះ និងពត៌មានផ្សេងៗដែលកម្មវិធីស្នើសុំ
+                            និងត្រូវបំពេញឲ្យបានត្រឹមត្រូវ។</p>
+                        <ul class="step-tips">
+                            <li>បំពេញព័ត៌មានឲ្យបានត្រឹមត្រូវ</li>
+                            <li>ត្រូវប្រាកដថាព័ត៌មានទាំងអស់ត្រឹមត្រូវមុនពេលបន្ត</li>
+                            <li>អាចកែប្រែព័ត៌មានបានប្រសិនបើមានកំហុស</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 9 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ជំហានទី ៩</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/idcards.png" alt="ចុះឈ្មោះគណនីថ្មី" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">បន្ទាប់ពីបំពេញព័ត៌មានត្រឹមត្រូវអស់ហើយ សូមចុចប៊ូតុង "កែប្រែព័ត៌មាន"
+                            ដើម្បីកែប្រែព័ត៌មាន ឬ "ពិនិត្យហើយបញ្ជាក់" ដើម្បីបញ្ចប់ការចុះឈ្មោះ។</p>
+                        <ul class="step-tips">
+                            <li>ពិនិត្យព័ត៌មានម្តងទៀតមុនពេលបញ្ចប់</li>
+                            <li>ប្រសិនបើត្រូវការកែប្រែ សូមចុចប៊ូតុង "កែប្រែព័ត៌មាន"</li>
+                            <li>ចុចប៊ូតុង "ពិនិត្យហើយបញ្ជាក់" ដើម្បីបញ្ចប់</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="usage-guide-section" id="usage-guide">
+        <h2 class="section-title">មុខងារ SmartNas</h2>
+        <div class="usage-steps">
+            <!-- Step 1 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>ពិនិត្យមើលតុល្យភាពទឹកប្រាក់</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/home.jpg" alt="ពិនិត្យសមតុល្យ" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ពិនិត្យមើលសមតុល្យ</p>
+                        <ul class="step-tips">
+                            <li>អាចពិនិត្យមើលសមតុល្យទឹកប្រាក់បានគ្រប់ពេលវេលា</li>
+                            <li>បង្ហាញចំនួនទឹកប្រាក់ដែលនៅសល់ក្នុងគណនី</li>
+                            <li>អាចមើលប្រវត្តិប្រតិបត្តិការបាន</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>របៀបបញ្ចូលទឹកប្រាក់</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <img src="img/usage2.jpg" alt="" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <!-- <p class="step-description">របៀបបញ្ចូលទឹកប្រាក់</p> -->
+                        <ul class="step-tips">
+                            <li>បញ្ចូលទឹកប្រាក់តាមរយះគណនីដែលយើងបានភ្ជាប់</li>
+                            <li>បញ្ចូលទឹកប្រាក់តាមរយះ E-Top upដែលធ្វើការបញ្ចូលតាមរយៈធនាគារផ្សេងៗ</li>
+                            <li>​បញ្ចូលតាមរយៈកាតកោសឬ ​ePin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>របៀបពិនិត្យមើលប្រវត្តិនៃការប្រើប្រាស់</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/history.jpg" alt="ពិនិត្យសមតុល្យ" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description"></p>
+                        <ul class="step-tips">
+                            <li>យើងអាចមើលប្រវត្តិប្រតិបត្តិការទាំងអស់ដោយគ្រាន់តែចុចប៊ូតុង​ "ប្រវត្តិការប្រើប្រាស់"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>SmartVIP</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <img src="img/smartvip.jpg" alt="ពិនិត្យសមតុល្យ" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">របៀបមើលពិន្ទុSmartVIP</p>
+                        <ul class="step-tips">
+                            <li>ចុចប៊ូតុង​ "SmartVIP"​នោះលោកអ្នកអាចមើលពិន្ទុនិងថ្ងៃខែផុតកំណត់របស់ពិន្នុផងដែរ</li>
+                            <li>ចុចប៊ូតុង​ "មើលរង្វាន់ទាំងអស់" ដើម្បីមើលរង្វាន់ដែលអាចប្តូរនិងមាននៅក្នុងស្តុក</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 6 -->
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>របៀបប្តូររង្វាន់</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <span class="image-text-overlay">SmartNas</span>
+                        <img src="img/exchange.jpg" alt="exchange" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ចុចលើទំនិញដែលចង់ប្តូរ</p>
+                        <ul class="step-tips">
+                            <li>ពិនិត្យមើលពិន្ទុរបស់អ្នកនិងលក្ខខណ្ឌនៃការប្តូរ</li>
+                            <li>ជ្រើសរើសទីតាំងSmart Shopដើម្បីយករង្វាន់ដោយចុចលើប៊ូតុង "កក់ទុក"</li>
+                            <li>រក្សាទុកលេខសម្ងាត់ដែលបានផ្ញើមកតាមរយះ SMS​ ដើម្បីផ្លាស់ប្តូររង្វាន់</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="usage-card">
+                <div class="usage-header">
+                    <h3>របៀបភ្ជាប់សេវាកម្ម​ Smart Roaming</h3>
+                </div>
+                <div class="usage-content">
+                    <div class="usage-image-wrapper">
+                        <img src="img/roaming.jpg" alt="Roaming" class="usage-preview clickable-image">
+                        <div class="image-overlay">
+                            <div class="zoom-indicator">
+                                <span class="zoom-icon">🔍</span>
+                                <span class="zoom-text">ចុចដើម្បីមើលរូបភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usage-details">
+                        <p class="step-description">ចុចលើប៊ូតុង "Roaming"</p>
+                        <ul class="step-tips">
+                            <li>រួចធ្វើតាមរបៀបភ្ជាប់ដែលគេបានប្រាប់</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <div class="image-section">
+                <button class="nav-btn prev-btn">&#10094;</button>
+                <img class="modal-content" id="img01">
+                <button class="nav-btn next-btn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <section class="advantages-section" id="advantages">
+        <div class="container">
+            <h2 class="section-title">អត្ថប្រយោជន៍</h2>
+            <p class="section-subtitle">កម្មវិធី SmartNas មានអត្ថប្រយោជន៍ដូចខងក្រោម៖</p>
+
+            <div class="advantages-grid">
+                <!-- Advantage 1 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                        </svg>
+                    </div>
+                    <h3>សន្សំសំចៃពេលវេលា</h3>
+                    <p>សម្រាប់ការធ្វើប្រតិបត្តិការប្រចាំថ្ងៃ និងការប្រើប្រាស់ប្រព័ន្ធ។</p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                        </svg>
+                    </div>
+                    <h3>សុវត្ថិភាពខ្ពស់</h3>
+                    <p>ការប្រើប្រាស់មានសុវត្ថិភាពខ្ពស់តាមរយៈការបញ្ចូលពាក្យសម្ងាត់។</p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
+                        </svg>
+                    </div>
+                    <h3>ងាយស្រួលប្រើប្រាស់</h3>
+                    <p>អាចពិនិត្យមើលទិន្នន័យ និងធ្វើប្រតិបត្តិការបានគ្រប់ពេលវេលា។</p>
+                </div>
+                <!-- Advantage 4 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v-2h-2v2z" />
+                        </svg>
+                    </div>
+                    <h3>ការគ្រប់គ្រងទិន្នន័យ</h3>
+                    <p>អាចតាមដានការប្រើប្រាស់ទិន្នន័យ និងកញ្ចប់សេវាកម្មផ្សេងៗបានយ៉ាងងាយស្រួល។</p>
+                </div>
+                <!-- Advantage 6 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-2h2v-2h-2v2z" />
+                        </svg>
+                    </div>
+                    <h3>កម្មវិធីកម្សាន្តគ្រប់ប្រភេទ</h3>
+                    <p>មានកម្មវិធីកម្សាន្តជាច្រើនប្រភេទដូចជា ការមើលវីដេអូ ស្តាប់តន្ត្រី និងលេងហ្គេមជាដើម។</p>
+                </div>
+
+                <!-- Advantage 7 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v-2h-2v2z" />
+                        </svg>
+                    </div>
+                    <h3>ការប្តូរពិន្ទុរង្វាន់</h3>
+                    <p>អាចប្តូរពិន្ទុរង្វាន់យកកញ្ចប់អុីនធឺណិត កញ្ចប់ទូរស័ព្ទ និងអត្ថប្រយោជន៍ផ្សេងៗជាច្រើនទៀត។</p>
+                </div>
+
+                <!-- Advantage 8 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                        </svg>
+                    </div>
+                    <h3>ការជូនដំណឹងភ្លាមៗ</h3>
+                    <p>ទទួលបានការជូនដំណឹងភ្លាមៗពីប្រតិបត្តិការ និងព័ត៌មានថ្មីៗផ្សេងៗ។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>អំពី SmartNas</h3>
+                    <p>SmartNas គឺជាកម្មវិធីទូរស័ព្ទដៃដែលមានភាពងាយស្រួលក្នុងការប្រើប្រាស់ និងមានសុវត្ថិភាពខ្ពស់។</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SmartAxiata" target="_blank" rel="noopener noreferrer"
+                            class="icon">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                style="color: white; width: 24px; height: 24px;">
+                                <path
+                                    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.708v-3.622h3.11V8.413c0-3.086 1.893-4.772 4.659-4.772 1.325 0 2.463.099 2.795.143v3.243h-1.918c-1.506 0-1.798.716-1.798 1.766v2.316h3.596l-.468 3.622h-3.128V24h6.128c.73 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/user/SmartAxiata" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube" class="icon">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                style="color: white; width: 24px; height: 24px;">
+                                <path
+                                    d="M23.499 6.203a2.997 2.997 0 0 0-2.116-2.117C19.548 3.5 12 3.5 12 3.5s-7.548 0-9.383.586a2.997 2.997 0 0 0-2.116 2.117C0 8.037 0 12 0 12s0 3.963.501 5.797a2.997 2.997 0 0 0 2.116 2.116C4.452 20.5 12 20.5 12 20.5s7.548 0 9.383-.586a2.997 2.997 0 0 0 2.116-2.116C24 15.963 24 12 24 12s0-3.963-.501-5.797zM9.75 15.018V8.982l6.27 3.018-6.27 3.018z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.smart.com.kh" target="_blank" rel="noopener noreferrer"
+                            aria-label="Website" class="icon">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                style="color: white; width: 24px; height: 24px;">
+                                <path
+                                    d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-4h2v-2h-2v2zm1-16a8 8 0 0 0-8 8c0 1.657.59 3.15 1.565 4.348L4.4 16.63A9.92 9.92 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10c0 2.24-.733 4.317-1.976 6.001l-1.273-1.257C20.219 15.152 21 13.647 21 12a8 8 0 0 0-8-8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>តំណភ្ជាប់រហ័ស</h3>
+                    <ul class="footer-links">
+                        <li><a href="#installation-guide">ការតំឡើង</a></li>
+                        <li><a href="#login-instructions">របៀបចូលប្រើប្រាស់កម្មវិធី</a></li>
+                        <li><a href="#usage-guide">មុខងារ​របស់ SmartNas</a></li>
+                        <li><a href="#advantages">អត្ថប្រយោជន៍</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>ទំនាក់ទំនង</h3>
+                    <ul class="footer-links">
+                        <li>023 XXX XXX</li>
+                        <li>info@smartnas.com</li>
+                        <li>ភ្នំពេញ, កម្ពុជា</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 SmartNas. សង្ខេបព័ត៌មាន។</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    window.onload = function () {
+        const modal = document.getElementById("modal1");
+        const modalImg = document.getElementById("img01");
+        const captionText = document.getElementById("caption");
+        const descriptionText = document.getElementById("description");
+        const images = document.querySelectorAll('.usage-preview');
+        const zoomButtons = document.querySelectorAll('.zoom-indicator');
+        const closeBtn = document.getElementsByClassName("close")[0];
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let currentImageIndex = 0;
+
+        // Create array of image data from the actual images on the page
+        const imageData = Array.from(images).map(img => ({
+            src: img.src,
+            title: img.alt,
+            description: img.closest('.usage-card')?.querySelector('.step-description')?.textContent || '',
+            tips: Array.from(img.closest('.usage-card')?.querySelectorAll('.step-tips li') || [])
+                .map(tip => tip.textContent)
+                .join('\n')
+        }));
+
+        // Show modal with specific image
+        function showImage(index) {
+            const data = imageData[index];
+            modalImg.src = data.src;
+            // captionText.textContent = data.title;
+            // descriptionText.innerHTML = `${data.description}<br><br>${data.tips}`;
+
+            // Show modal first
+            modal.style.display = "flex";  // Changed from "block" to "flex"
+
+            // Add fullscreen class to modal content
+            modalImg.classList.add('fullscreen');
+
+            // Add show class after a brief delay to trigger transition
+            requestAnimationFrame(() => {
+                modal.classList.add('show');
+                document.body.classList.add('popup-open');
+            });
+        }
+
+        // Event listeners for zoom buttons
+        zoomButtons.forEach((button, index) => {
+            button.onclick = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                currentImageIndex = index;
+                showImage(currentImageIndex);
+            };
+        });
+
+        // Event listeners for navigation
+        images.forEach((image, index) => {
+            image.onclick = function (e) {
+                e.preventDefault();
+                currentImageIndex = index;
+                showImage(currentImageIndex);
+            };
+        });
+
+        prevBtn.onclick = function () {
+            currentImageIndex = (currentImageIndex - 1 + imageData.length) % imageData.length;
+            showImage(currentImageIndex);
+        };
+
+        nextBtn.onclick = function () {
+            currentImageIndex = (currentImageIndex + 1) % imageData.length;
+            showImage(currentImageIndex);
+        };
+
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('show');
+            modalImg.classList.remove('fullscreen');
+
+            setTimeout(() => {
+                modal.style.display = "none";
+                document.body.classList.remove('popup-open');
+            }, 300);
+        }
+
+        closeBtn.onclick = closeModal;
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            if (modal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    prevBtn.click();
+                } else if (e.key === "ArrowRight") {
+                    nextBtn.click();
+                } else if (e.key === "Escape") {
+                    closeModal();
+                }
+            }
+        });
+
+        // Close when clicking outside the image
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        };
+
+        // Prevent modal content clicks from closing the modal
+        modalImg.onclick = function (e) {
+            e.stopPropagation();
+        };
+    };
+
+</script>
