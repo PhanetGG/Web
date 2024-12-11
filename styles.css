@@ -2,7 +2,7 @@ body {
     font-family: 'Battambang', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f0f2f5;
 }
 
 header {
@@ -20,47 +20,41 @@ header h1 {
 /* Navigation Styles */
 nav {
     background: linear-gradient(135deg, #0f9b4e 0%, #1abc9c 100%);
-    padding: 0.5rem 5%;
+    padding: 0.3rem 5%;
     display: flex;
     align-items: center;
     gap: 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
 }
 
 nav img {
-    height: 80%;
-    width:9%;
+    height: 40px;
+    width: auto;
     transition: transform 0.3s ease;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-}
-
-nav img:hover {
-    transform: scale(1.05);
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0.2rem 0;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    flex: 1;
+    gap: 1.2rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    white-space: nowrap;
 }
 
 nav a::before {
@@ -90,18 +84,19 @@ nav a.active {
 /* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
-    background: none;
-    border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 28px;
     cursor: pointer;
-    padding: 0.5rem;
+    margin-left: auto;
+    padding: 5px 10px;
+    z-index: 1002;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
     }
 
     .mobile-menu-btn {
@@ -110,30 +105,47 @@ nav a.active {
 
     .nav-links {
         position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
+        top: 50px;
+        left: -30%;
+        width: 30%;
+        height: 100vh;
         background: #0f9b4e;
         flex-direction: column;
         padding: 1rem;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        transition: left 0.3s ease;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        left: 0;
     }
 
-    nav a {
+    .nav-links a {
         width: 100%;
-        text-align: center;
+        padding: 0.8rem;
+        text-align: left;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .nav-links {
+        width: 50%; /* Wider menu for small screens */
+        left: -50%;
     }
 }
 
 .section {
     padding: 30px;
     /* Increased padding */
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -182,7 +194,7 @@ nav a.active {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(200, 200, 200, 0.95);
     opacity: 0;
     transition: opacity 0.3s ease;
     justify-content: center;
@@ -343,7 +355,7 @@ nav a.active {
 
 .login-section {
     padding: 3rem 1.5rem;
-    background: #f8f9fa;
+    background: #e8eaed;
 }
 
 .section-title {
@@ -375,7 +387,7 @@ nav a.active {
 }
 
 .step-card {
-    background: white;
+    background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -387,11 +399,11 @@ nav a.active {
 }
 
 .step-header {
+    background: #f4f5f7;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem;
-    background: #f8f9fa;
 }
 
 .step-number {
@@ -435,21 +447,32 @@ nav a.active {
 
 .image-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .zoom-icon {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.zoom-text {
+    font-size: 0.9rem;
+}
+
+.usage-image-wrapper:hover .image-overlay {
+    opacity: 1;
+}
+
+.usage-image-wrapper:hover .zoom-indicator {
+    transform: translateY(0);
 }
 
 .step-card:hover .image-overlay {
@@ -511,10 +534,10 @@ nav a.active {
 }
 
 .platform-panel {
-    background: white;
+    background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -621,88 +644,50 @@ nav a.active {
 
 .usage-guide-section {
     padding: 2rem;
-    background: #f8f9fa;
+    background: #e8eaed;
 }
 
 .usage-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .usage-card {
-    background: white;
-    max-width: 450px;
-    /* Added max-width */
-    margin: 0 auto;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.usage-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .usage-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 15px;
-    background: linear-gradient(135deg, #0f9b4e 0%, #1abc9c 100%);
+    background: #0f9b4e;
+    padding: 0.5rem 1rem;
     color: white;
-}
-
-.step-badge {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .usage-header h3 {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .usage-content {
-    padding: 10px;
-    padding-bottom: 0px;
+    display: flex;
+    padding: 1rem;
+    gap: 1.2rem;
+    align-items: flex-start;
+    background-color: #dedbdb;
 }
 
 .usage-image-wrapper {
+    flex: 0 0 300px;
     position: relative;
-    border-radius: 15px;
+    border-radius: 4px;
     overflow: hidden;
-    margin: 0.5rem auto;
-    /* Reduced from 1.5rem */
-    width: 100%;
-    max-width: 350px;
-    /* Reduced from 400px */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Add this new style for the text overlay */
-.image-text-overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(15, 155, 78, 0.9);
-    /* Green background with opacity */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    z-index: 2;
 }
 
 .usage-preview {
@@ -710,54 +695,18 @@ nav a.active {
     height: auto;
     display: block;
     object-fit: contain;
-    /* Changed from cover to contain */
-    border-radius: 15px;
-    aspect-ratio: 16/9;
+    max-height: 350px;
 }
 
-img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
-}
-
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.zoom-indicator {
-    color: white;
-    text-align: center;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.zoom-icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.usage-card:hover .image-overlay {
-    opacity: 1;
-}
-
-.usage-card:hover .zoom-indicator {
-    transform: translateY(0);
+.usage-details {
+    flex: 1;
 }
 
 .step-description {
-    color: #2c3e50;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333333;
 }
 
 .step-tips {
@@ -767,10 +716,12 @@ img {
 }
 
 .step-tips li {
-    color: #666;
-    padding-left: 1.5rem;
+    color: #333333;
+    padding-left: 1.4rem;
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .step-tips li::before {
@@ -778,31 +729,37 @@ img {
     color: #0f9b4e;
     position: absolute;
     left: 0;
-    font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .usage-guide-section {
-        padding: 3rem 1rem;
-    }
-
+/* Responsive adjustments */
+@media (max-width: 992px) {
     .usage-steps {
         grid-template-columns: 1fr;
     }
 
-    .usage-card {
-        max-width: 500px;
-        margin: 0 auto;
+    .usage-content {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .usage-header h3 {
-        font-size: 1.2rem;
+    .usage-image-wrapper {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .usage-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usage-images .usage-image-wrapper {
+        max-width: 400px;
     }
 }
 
 .advantages-section {
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #e8eaed;
 }
 
 .container {
@@ -825,7 +782,7 @@ img {
 }
 
 .advantage-card {
-    background: white;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
@@ -1505,5 +1462,203 @@ body.popup-open {
 
     .next-btn {
         right: 10px;
+    }
+}
+
+/* Default two-column layout */
+.usage-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Single image layout */
+.usage-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.usage-image-wrapper {
+    flex: 0 0 300px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.usage-preview {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 350px;
+}
+
+.usage-details {
+    flex: 1;
+}
+
+/* Make card with multiple images take width but not full screen */
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) {
+    grid-column: 1 / -1;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 0 1rem;
+}
+
+/* Style content with multiple images */
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-image-wrapper {
+    flex: 0 0 320px;
+}
+
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-preview {
+    max-height: 400px;
+}
+
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-details {
+    flex: 0 0 350px;
+    margin-left: 2rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .step-description {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .step-tips li {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .usage-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .usage-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usage-image-wrapper {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Mobile adjustments for multiple images */
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) {
+        padding: 0 1rem;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-content {
+        flex-direction: column;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-image-wrapper {
+        max-width: 350px;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-details {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-content {
+        margin-right: 1rem;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-content {
+        margin-left: 1rem;
+    }
+
+    .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) .usage-details {
+        padding-right: 0rem;
+    }
+}
+
+/* Add specific styling for SmartVIP content */
+.usage-card:has(.step-description:contains("របៀបមើលពិន្ទុSmartVIP")) .usage-details {
+    margin-right: 5px;
+}
+
+/* Alternative approach using a new class */
+.smartvip-details {
+    margin-right: 5px !important;
+}
+
+/* SmartVIP specific styles */
+.smartvip-details {
+    padding-right: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+/* Platform description styles */
+.platform-description {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f4f5f7;
+    border-radius: 8px;
+}
+
+.platform-description h4 {
+    color: #2c3e50;
+    margin: 0 0 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.requirement-list li {
+    color: #666;
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.requirement-list li::before {
+    content: '•';
+    color: #0f9b4e;
+    position: absolute;
+    left: 0;
+}
+
+.compatibility-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .platform-description {
+        margin: 1rem 0;
+        padding: 0.8rem;
     }
 }
