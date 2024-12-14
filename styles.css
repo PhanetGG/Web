@@ -194,7 +194,7 @@ nav a.active {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(200, 200, 200, 0.95);
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
     transition: opacity 0.3s ease;
     justify-content: center;
@@ -203,6 +203,68 @@ nav a.active {
 
 .modal.show {
     opacity: 1;
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.modal-content.fullscreen {
+    transform: scale(1);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #bbb;
 }
 
 /* Update the modal container styles */
@@ -658,37 +720,52 @@ nav a.active {
 
 .usage-card {
     background: #ffffff;
-    border-radius: 6px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.usage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .usage-header {
-    background: #0f9b4e;
-    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #0f9b4e 0%, #1abc9c 100%);
+    padding: 1rem 1.5rem;
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .usage-header h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
 .usage-content {
     display: flex;
-    padding: 1rem;
-    gap: 1.2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
     align-items: flex-start;
-    background-color: #dedbdb;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
 
 .usage-image-wrapper {
     flex: 0 0 300px;
     position: relative;
-    border-radius: 4px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+.usage-image-wrapper:hover {
+    transform: scale(1.02);
+}
+
 
 .usage-preview {
     width: 100%;
@@ -1660,5 +1737,136 @@ body.popup-open {
     .platform-description {
         margin: 1rem 0;
         padding: 0.8rem;
+    }
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0f9b4e;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top svg {
+    fill: white;
+}
+
+.scroll-to-top:hover {
+    background: #1abc9c;
+    transform: translateY(-3px);
+}
+
+/* Progress bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, #0f9b4e, #1abc9c);
+    z-index: 1001;
+    transition: width 0.3s ease;
+}
+
+/* Animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+body:not(.loaded) .loading {
+    opacity: 1;
+}
+
+body.loaded .loading {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Active navigation link */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+/* Language switcher styles */
+.language-switcher {
+    margin-left: auto;
+    padding: 0 1rem;
+}
+
+.language-switcher select {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: 'Battambang', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-switcher select:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher select option {
+    background: #0f9b4e;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-right: 60px; /* Make room for mobile menu button */
     }
 }
