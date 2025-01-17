@@ -1557,7 +1557,7 @@ body.popup-open {
 /* Make card with multiple images take width but not full screen */
 .usage-card:has(.usage-content > .usage-image-wrapper + .usage-image-wrapper) {
     grid-column: 1 / -1;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
